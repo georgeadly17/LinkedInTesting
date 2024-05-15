@@ -28,7 +28,7 @@ public class TestBase {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("https://www.linkedin.com/feed/");
+        driver.get("https://www.talabat.com/egypt");
         driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
     }
 

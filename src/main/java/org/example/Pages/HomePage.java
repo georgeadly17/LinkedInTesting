@@ -9,40 +9,20 @@ public class HomePage extends PageBase{
     public HomePage(WebDriver driver) {
         super(driver);
     }
-    // Start a post
-    @FindBy(id = "ember1346")
-    WebElement startAPost;
 
-    // Like Button
-    @FindBy(id = "ember1368")
-    WebElement like;
+    @FindBy (xpath = "//*[@id=\"__next\"]/div[1]/div/div/div[4]/ul[1]/li[6]/button")
+    WebElement login;
 
-    // Comment Button
-    @FindBy(id = "feed-shared-social-action-bar-comment-ember1367")
-    WebElement comment;
+    @FindBy(partialLinkText = "Create an")
+    WebElement createAccount;
 
-    // My Network
-    @FindBy(tagName = "a")
-    WebElement myNetwork;
 
-    // Start a post
-    public void setStartAPost() {
-        startAPost.click();
+    public void LoginIn(){
+        login.click();
     }
 
-    // Like Button
-    public void setLike() {
-        like.click();
-    }
-
-    // Comment Button
-    public void setComment() {
-        comment.click();
-    }
-
-    // Comment Button
-    public void setMyNetwork() {
-        myNetwork.click();
+    public void createAccount(){
+        createAccount.click();
     }
 
 }
