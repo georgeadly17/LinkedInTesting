@@ -4,6 +4,8 @@
     <test verbose="2" preserve-order="true" name="Ecommerce Testing">
         <classes>
             <class name="Tests.SignUp"/>
+            <class name="Tests.LoginTest"/>
+            <class name="Tests.FindJobTest"/>
         </classes>
     </test>
 </suite>

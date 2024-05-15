@@ -34,7 +34,6 @@ public class TestBase {
 
     @AfterClass
     public void closeUrl() throws InterruptedException {
-        Thread.sleep(3000);
         driver.quit();
     }
 
@@ -48,5 +47,10 @@ public class TestBase {
             File photo=sc.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(photo,new File("./screenshots/"+result.getName()+".png"));
         }
+    }
+
+    public void scroll(String x , String y){
+        executor = (JavascriptExecutor) driver;
+        executor.executeScript("scrollBy("+x+","+y+")");
     }
 }
